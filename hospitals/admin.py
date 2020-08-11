@@ -17,3 +17,5 @@ class PatientAdmin(admin.ModelAdmin):
 admin.site.register(Doctor, DoctorAdmin)
 admin.site.register(Patient, PatientAdmin)
 admin.site.register(Diagnosis, DiagnosisAdmin)
+
+# hese are some changes
