@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-hover ">
+        <thead class="tr">
+            <th>Patient Name</th>
+            <th>User Name</th>
+            <th>Doctor</th>
+        </thead>
+        <tbody>
+            {% for Patient  in patients %}
+                <tr>
+                    <td>
+                    <a href="{%url 'detail' Patient.id%}"> {{Patient.patName}} </a>
+                    
+                    </td>
+                    <td>{{Patient.userName}}</td>
+                    <td>{{Patient.doc}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock  %}
