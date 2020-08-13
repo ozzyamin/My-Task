@@ -8,13 +8,13 @@ class DoctorSerializer(serializers.ModelSerializer):
         fields = ('id', 'docName', 'userName')
 
 
-class PatientSerializer(serializers.HyperlinkedModelSerializer):
+class PatientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
-        fields = ('id', 'url', 'patName', 'userName', 'doc')
+        fields = ('id',  'patName', 'userName')
 
 
-class DiagnosisSerializer(serializers.HyperlinkedModelSerializer):
+class DiagnosisSerializer(serializers.ModelSerializer):
     class Meta:
         model = Diagnosis
-        fields = ('id', 'url', 'diagType', 'pat')
+        fields = ('id',  'diagType')

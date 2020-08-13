@@ -13,18 +13,3 @@ def index(request):
 def detail(request, patient_id):
     patient = Patient.objects.get(pk=patient_id)
     return render(request, 'hospitals\detail.html', {'patient': patient})
-
-
-class PatientView(viewsets.ModelViewSet):
-    queryset = Patient.objects.all()
-    serializer_class = PatientSerializer
-
-
-class DoctorView(viewsets.ModelViewSet):
-    queryset = Doctor.objects.all()
-    serializer_class = DoctorSerializer
-
-
-class DiagnosisView(viewsets.ModelViewSet):
-    queryset = Diagnosis.objects.all()
-    serializer_class = DiagnosisSerializer

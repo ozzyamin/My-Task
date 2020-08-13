@@ -3,15 +3,15 @@ from .models import Doctor, Patient, Diagnosis
 
 
 class DoctorAdmin(admin.ModelAdmin):
-    list_display = ('id', 'docName')
+    list_display = ('docName'),
 
 
 class DiagnosisAdmin(admin.ModelAdmin):
-    list_display = ('id', 'diagType')
+    list_display = ('diagType'),
 
 
 class PatientAdmin(admin.ModelAdmin):
-    list_display = ('patName')
+    list_display = ('patName'),
 
 
 admin.site.register(Doctor, DoctorAdmin)

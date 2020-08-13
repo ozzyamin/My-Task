@@ -1,14 +1,10 @@
 from django.urls import path, include
-from . import views
+from .api import DoctorViewSet, PatientViewSet, DiagnosisViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('Patients', views.PatientView)
-router.register('Doctor', views.DoctorView)
-router.register('Diagnosis', views.DiagnosisView)
+router.register('api/Patients', PatientViewSet, 'Patient')
+router.register('api/Doctor', DoctorViewSet, 'Doctor')
+router.register('api/Diagnosis', DiagnosisViewSet, 'Diagnosis')
 
-urlpatterns = [
-    path('', include(router.urls)),
-    path('', views.index, name='index'),
-    path('<int:patient_id>', views.detail, name='detail'),
-]
+urlpatterns = router.urls
