@@ -6,12 +6,12 @@ class DoctorAdmin(admin.ModelAdmin):
     list_display = ('docName'),
 
 
-class DiagnosisAdmin(admin.ModelAdmin):
-    list_display = ('diagType'),
-
-
 class PatientAdmin(admin.ModelAdmin):
     list_display = ('patName'),
+
+
+class DiagnosisAdmin(admin.ModelAdmin):
+    list_display = ('diag'),
 
 
 admin.site.register(Doctor, DoctorAdmin)

@@ -5,16 +5,16 @@ from .models import Patient, Doctor, Diagnosis
 class DoctorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Doctor
-        fields = ('id', 'docName', 'userName')
+        fields = ('__all__')
 
 
 class PatientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
-        fields = ('id',  'patName', 'userName')
+        fields = ('__all__')
 
 
 class DiagnosisSerializer(serializers.ModelSerializer):
     class Meta:
         model = Diagnosis
-        fields = ('id',  'diagType')
+        fields = ('__all__')
